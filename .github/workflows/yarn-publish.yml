@@ -18,10 +18,10 @@ jobs:
           node-version: 12
       - uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: --frozen-lockfile
+          run: yarn
       - uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: run build
+          run: yarn run build
       - uses: peaceiris/actions-gh-pages@v3.6.4
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
