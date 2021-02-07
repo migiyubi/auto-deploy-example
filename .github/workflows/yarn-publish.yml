@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -18,7 +18,7 @@ jobs:
           node-version: 12
       - uses: borales/actions-yarn@v2.0.0
         with:
-          run: yarn
+          run: yarn --frozen-lockfile
       - uses: borales/actions-yarn@v2.0.0
         with:
           run: yarn run build
